@@ -120,7 +120,7 @@ bot.onText(/\/products/, async (msg) => {
 
     // Create inline keyboard buttons for products
     const keyboard = products.map(product => [{
-      text: `${product.name} - ₹${product.price} ${product.inventoryQuantity > 0 ? '🟢' : '🔴'}`,
+      text: `${product.inventoryQuantity > 0 ? '🟢' : '🔴'} ${product.name} - ₹${product.price}`,
       callback_data: `product_${product.productId}`
     }]);
 
