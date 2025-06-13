@@ -55,7 +55,7 @@ bot.onText(/\/start/, async (msg) => {
         '/mysubscriptions - View your subscriptions\n' +
         '/unsubscribeall - Unsubscribe from all products\n' +
         '/help - Show this help message\n\n' +
-        '📧 For any support, contact: thakkarnisarg@gmail.com'
+        '📧 For any support, contact: 423eeba1-805e-419d-b031-f2f038146513@persist.site'
       );
       return;
     }
