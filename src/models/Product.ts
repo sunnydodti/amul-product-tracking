@@ -10,7 +10,9 @@ const productSchema = new Schema<IProduct>({
   lastChecked: { type: Date, default: Date.now },
   image: { type: String },
   brand: { type: String },
-  wasOutOfStock: { type: Boolean, default: false }
+  wasOutOfStock: { type: Boolean, default: false },
+  isLowStock: { type: Boolean, default: false },
+  available: { type: Boolean, default: false }
 }, {
   timestamps: true
 });
@@ -18,5 +20,7 @@ const productSchema = new Schema<IProduct>({
 // Indexes for better performance
 productSchema.index({ inventoryQuantity: 1 });
 productSchema.index({ lastChecked: 1 });
+productSchema.index({ available: 1 });
+productSchema.index({ isLowStock: 1 });
 
 export const Product = mongoose.model<IProduct>('Product', productSchema);

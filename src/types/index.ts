@@ -10,6 +10,8 @@ export interface IProduct extends Document {
   image?: string;
   brand?: string;
   wasOutOfStock: boolean;
+  isLowStock: boolean;
+  available: boolean;
 }
 
 export interface ISubscription extends Document {
@@ -28,6 +30,8 @@ export interface AmulProductData {
   inventory_quantity: number;
   images?: Array<{ image: string }>;
   brand?: string;
+  available: number;
+  inventory_low_stock_quantity: number;
 }
 
 export interface SubscribeRequest {
